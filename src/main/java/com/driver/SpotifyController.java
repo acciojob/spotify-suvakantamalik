@@ -5,7 +5,7 @@ import java.util.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("spotify")
+@RequestMapping("/spotify")
 public class SpotifyController {
 
     //Autowire will not work in this case, no need to change this and add autowire
@@ -64,7 +64,7 @@ public class SpotifyController {
         //Find the playlist with given title and add user as listener of that playlist and update user accordingly
         //If the user is creater or already a listener, do nothing
         //If the user does not exist, throw "User does not exist" exception
-        //If the playlist does not exists, throw "Playlist does not exist" exception
+        //If the playlist does not exist, throw "Playlist does not exist" exception
         // Return the playlist after updating
         spotifyService.findPlaylist(mobile, playlistTitle);
         return "Success";
